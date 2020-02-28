@@ -1,0 +1,92 @@
+<!-- <%= form_with(model: user, local: true) do |form| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+        <% user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :password %>
+    <%= form.password_field :password, :class => 'password' %>
+  </div>
+  <div class="field">
+    <%= form.label :password_confirmation %>
+    <%= form.password_field :password_confirmation, :class => 'password' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %> -->
+
+<div class="container-fluid">        
+  <div class="row">      
+          <div class="jumbotron jumbotron-fluid ">
+              <div class="container">
+                  <div class="logo-section text-center">
+                      <i class="lab la-twitter twit"></i>
+                      <span class="display-5">Log in to Tweeter</span>                      
+                  </div>
+                  <%= form_with(model: user, local: true) do |form| %>
+                      <% if user.errors.any? %>
+                      <div id="error_explanation">
+                        <%# <h2>pluralize(user.errors.count, "error") prohibited this user from being saved: </h2> %>
+                  
+                        <ul style="list-style-type: none;margin-top: 20px;">
+                          <% user.errors.full_messages.each do |message| %>
+                            <li style="height: 50px"><span class="alert alert-danger"><%= message %></span></li>
+                          <% end %>
+                        </ul>
+                      </div>
+                    <% end %>
+
+                      <div class="form-group">
+                      <%= form.label :name, :class => 'auth-label' %>
+                      <%= form.text_field :name,  :class => 'form-control', :placeholder => "Name" %>
+                      </div>
+
+                      <div class="form-group">
+                      <%= form.label :username, :class => 'auth-label' %>
+                      <%= form.text_field :username,  :class => 'form-control', :placeholder => "Username" %>
+                      </div>
+
+                      <div class="form-group">
+                      <%= form.label :email, :class => 'auth-label' %>
+                      <%= form.text_field :email,  :class => 'form-control', :placeholder => "Email" %>
+                      </div>
+
+                      <div class="form-group">
+                      <%= form.label :password %>
+                      <%= form.password_field :password, :class => 'form-control', :placeholder => "Password" %>
+                      </div>
+                      <div class="actions">
+                      <%= form.submit 'Login', class: 'btn btn-primary submit' %>
+                      </div>
+                      <br>
+                      <% end %>
+
+                      <p >Member already ? <%= link_to "Login!", login_path, class: "" %></p>
+                      <br>              
+              </div>
+            
+
+      </div>
+     
+  </div>
+</div>

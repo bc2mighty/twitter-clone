@@ -1,0 +1,51 @@
+<div class="container-fluid">
+  <div class="row">
+
+        <%=  form_with(model: user, local: true, class: 'editform') do |form| %>
+                    <div class="control-container">
+                      <%= form.label :name %>
+                      <%= form.text_field :name, :placeholder => "Name" %>
+                      </div>
+
+                      <div class="control-container">
+                      <%= form.label :username %>
+                      <%= form.text_field :username, :placeholder => "Username" %>
+                      </div>
+
+                      <div class="control-container">
+                      <%= form.label :email %>
+                      <%= form.text_field :email,   :placeholder => "Email" %>
+                      </div>
+
+                      <div class="control-container">
+                      <%= form.label :password %>
+                      <%= form.password_field :password %>
+                      </div>
+                      <div class="control-container">
+                          <label for="">Bio</label>
+                          <input type="text" placeholder="Software Engineer.Choose love. Forever LSU">
+                      </div>
+                      <br>
+                      <div class="control-container">
+                          <label for="">Location</label>
+                          <input type="text" placeholder="Add your location">
+                      </div>
+                      <br>
+                      <div class="control-container">
+                          <label for="">Website</label>
+                          <input type="text" placeholder="Add your Website">
+                      </div>
+                      <div class="actions">
+                      <%= form.submit 'Login', class: 'btn btn-primary submit' %>
+                      </div>
+
+                      <br>
+                      <p>Birth date.<a href="">Edit</a></p>
+                      <p>April 22,1990</p>
+                      <br>
+                      <% end %>
+
+
+
+  </div>
+</div>

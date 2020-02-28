@@ -1,0 +1,135 @@
+// Place all the styles related to the sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+body{
+    font-family:"roboto";
+
+    }
+
+.no-top{
+    margin-top: -2em;
+}
+.leftside,.rightside{
+     height:100vh;
+     width:100%;
+}
+
+.leftside{
+    background-image:url(./twitter.bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.rightside{
+    background-color: #fff;
+}
+// .login-form{
+//     margin-top: 100px;
+//     margin-bottom: -100px;
+//     margin-left: 20%;
+// }
+
+
+.btn-outline-secondary, .btn-outline-secondarytoo{
+    padding: 15px 0;
+    font-size: 20px;
+    font-weight: bold !important;
+    width:400px;
+     letter-spacing: 1px;
+    line-height: 15px;
+    border: 1px solid #00acee !important;
+    border-radius: 25px !important;
+
+    transition: all 0.3s ease 0s;
+}
+.btn-outline-secondarytoo{
+    background: #00ACEE !important;
+    color: #fff !important;
+}
+
+.btn-outline-secondary{
+    color: #00ACEE !important;
+}
+.btn-outline-secondary:hover{
+    background: rgba(29, 161, 242, .3) !important;
+    color: #00acee !important;
+}
+.btn-outline-secondarytoo:hover{
+    background: rgb(52, 145, 202) !important;
+
+}
+
+// .btn-outline-secondarytoo:hover{
+//     background: #fff;
+//     border: 2px solid #00acee;
+//     color:#00ACEE;
+// }
+
+.flexpicture{
+    display: flex;
+    flex:1;
+    align-items: flex-start;
+}
+
+.flextweet{
+    display: flex;
+    flex:11;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap
+}
+
+.flextweetnow{
+    display: flex;
+    flex:11;
+    flex-flow: column wrap;
+}
+
+img.image-shit {
+    border-radius: 50%;
+    max-width: 50px;
+}
+
+#profile{
+    margin-left: 60%;
+}
+#main{
+    border:ridge;
+}
+
+.flexlike{
+    flex:1;
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+}
+
+.paragraph{
+    max-width:  80%;
+}
+
+.container{
+    display:flex;
+    // border:ridge;
+    flex-flow: column wrap;
+        /* flex-flow: nowrap; */
+}
+
+// input[type=text] {
+
+//     border:none;
+//     outline: none;
+//     width: 100%;
+// }
+#uploads > input {
+    display: none;
+}
+
+#uploads img{
+    cursor: pointer;
+}
+
+#tweetnow{
+    width:100px;
+    align-self: flex-end;
+}

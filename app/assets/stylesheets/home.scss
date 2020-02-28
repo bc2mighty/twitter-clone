@@ -1,0 +1,95 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.profile-card{
+        width: 100%;
+        // border: 1px solid #f2f2f2;
+
+      }
+
+      .profile-card-img-top{
+         width:100%;
+
+
+      }
+    .profile-pic{
+        border: white solid;
+        border-radius: 50%;
+        max-width: 105px;
+        vertical-align: top;
+        margin-top: -70px;
+    }
+
+
+    a.profilepicture{
+        /* position: absolute;
+        left: 18px;
+        top: 120px; */
+        margin-bottom: 3em;
+    }
+    .x{
+        background-color: #00ACEE !important;
+        border-radius: 40px;
+        font-size: 15px;
+        border: none;
+        padding: 10px;
+
+
+      }
+      form.editform{
+        margin-top: 70px;
+     }
+
+     form.editform .control-container{
+         height: 70px;
+         width: 100%;
+         // background-color:#deebfa;
+         // border-bottom :2px solid grey;
+         padding: 3px 3%;
+         box-sizing: border-box;
+     }
+
+     .control-container label{
+         height: 20px;
+         width: 100%;
+     }
+
+     .control-container input{
+         height: 30px;
+         width: 100%;
+         background: transparent;
+         box-shadow: none;
+         border-top: hidden;
+         border-left: hidden;
+         border-right: hidden;
+         border-bottom: none
+     }
+
+     input[type=text].edit-input {
+        border-top: hidden;
+        border-left: hidden;
+        border-right: hidden;
+        /* border-bottom :2px solid grey; */
+        outline: none !important;
+        width: 100%;
+        background-color:#deebfa;
+
+        height:70px;
+      }
+      .btn-profile{
+        text-transform: none;
+        text-decoration: none;
+        color:#00ACEE ;
+        width: 120px;
+        margin-top: -20px;
+        margin-left: calc(100% - 120px);
+        border: 1px solid #00acee;
+        border-radius: 40px;
+        padding: 10px;
+        box-sizing: border-box;
+        background: transparent;
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+        outline: none !important;
+
+    }

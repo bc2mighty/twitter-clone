@@ -1,0 +1,42 @@
+
+
+<div class ="row no-top">
+
+    <div class ="col ">
+    <div class = "leftside">
+
+
+    </div>
+
+
+    </div>
+
+
+    <div class ="col ">
+      <div class = "rightside">
+
+          <div class="d-flex flex-column justify-content-center align-items-center h-100">
+            <div class="intro">
+              <% if !notice.nil? and notice != "" %>
+                <p id="notice" class="alert alert-success"><%= notice %></p>
+              <% end %>
+                <%= image_tag "logo.png", :class=>"image-shit"%>
+              <h3 class="pb-5"> <strong>See what's happening in <br> the world right now</strong></h3>
+              <p><strong>Join Twitter today.</strong></p>
+                <%= link_to 'Sign up', new_user_path, :class=> "btn btn-outline-secondarytoo mb-3 " %>
+                <br>
+                <%= link_to 'Login', login_path, :class=> "btn btn-outline-secondary  "  %>
+            </div>
+
+             </div>
+
+
+      </div>
+
+
+    </div>
+
+
+
+
+  </div>

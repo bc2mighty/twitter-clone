@@ -1,0 +1,57 @@
+
+
+<section class="page-container">
+    <%= render 'landing/left_column' %>
+
+    <div class="column">
+        <div class="profile-card">
+            <%= image_tag "temp.jfif", :class => "profile-card-img-top", :alt=>"..." %>
+    ​
+            <div class="card-body">
+                <a href="" class="profilepicture mt-5">
+                    <%= image_tag "iman.jpg", :class => "profile-pic", :alt=>"..." %>
+                </a>
+                <button type="submit" class="btn-profile" data-toggle="modal" data-target="#exampleModalLong"><b>Edit profile</b></button>
+                <h5 class="card-title"><%= @user_url_details.name %></h5>
+                <p class="temp">@<%= @user_url_details.username %></p>
+                <br>
+                <p>Software Engineer.Choose love. Forever LSU</p>
+                <p><%= image_tag "baloon.png", :alt=>"..." %>Born April 22, 1990 <%= image_tag "calendar.png", :alt=>"..." %> Joined July 2013</p>
+                <p><b>399</b> Following <b>955</b> Followers</p>
+    ​
+    ​
+            </div>
+        </div>
+    </div>
+
+    <%= render 'landing/right_column' %>
+</section>
+​
+​
+
+  <!-- Modal -->
+  <div class="modal fade bd-example-modal-lg" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Edit Profile</h5>
+          <button type="button" class="btn btn-primary x" data-dismiss="modal" aria-label="Close">
+            Save Changes
+          </button>
+        </div>
+        <div class="modal-body">
+            <%= image_tag "temp.jfif", :class => "profile-card-img-top", :alt=>"..." %>
+            <a href="" class="profilepicture">
+                <%= image_tag "iman.jpg", :class => "profile-pic", :alt=>"..." %>
+            </a>
+
+
+            <form class="editform mt-5">
+              <%= render 'edit', user: @user %>
+
+            </form>
+​
+        </div>
+      </div>
+    </div>
+  </div>

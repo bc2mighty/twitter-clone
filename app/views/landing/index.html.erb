@@ -1,0 +1,143 @@
+<!--
+
+<h1>Landing#index</h1>
+<p>Find me in app/views/landing/index.html.erb</p>
+
+<div id="messages"></div>
+<div id="followers" style="display:none" data='<%= @followers %>'></div>
+
+<h1>Tweet Part</h1>
+<input id="user_id" value=""/>
+<%= form_for @tweet, remote: true do |f| %>
+    <%= f.text_field :tweet, :id=>"tweet_content", :placeholder=>"Enter Your Tweet Here..." %>
+    <%= f.hidden_field :followers, :value => @followers, :id=>"room-id" %>
+    <%= f.submit %>
+<% end %>
+<h3>Your tweets</h3>
+
+-->
+<input type="hidden" id="current_signed_in_user" value="<%= @user.user_id %>"/>
+<section class="page-container">
+    <%= render 'landing/left_column' %>
+
+    <div class="column">
+        <div class="home-top">
+            <div class="title">Home</div>
+            <i class="fa fa-star"></i>
+        </div>
+        <div class="tweet-form">
+            <div class="side-left-side">
+                    <%= image_tag "user.png", :style => "height: 35px; width: 35px;", :class => "img-class" %>
+            </div>
+            <div class="right">
+                <%= form_for @tweet, remote: true do |f| %>
+                    <div class="input-container">
+                        <%= f.text_field :tweet, :id=>"tweet_content", :placeholder=>"What's Happening?" %>
+                    </div>
+                    <%= f.hidden_field :followers, :value => @followers, :id=>"room-id" %>
+                    <div class="icons">
+                        <span class="span-fields file-field">
+                            <%= f.file_field :file %>
+                        </span>
+                        <span class="span-fields btn-field">
+                            <%= f.submit "Tweet" %>
+                        </span>
+                    </div>
+                    <%= f.hidden_field :followers, :value => @followers, :id=>"room-id" %>
+                    <%# f.submit %>
+                <% end %>
+            </div>
+        </div>
+        <div class="tweet-form-after"></div>
+        <div class="all-tweets">
+            <div class="tweet-container">
+                <a href="#top-bar1" class="tweet-link"> </a>
+                <div class="sides">
+                    <div class="side-left-side">
+                        <a href="#profile">
+                            <div class="profile-img"></div>
+                        </a>
+                    </div>
+
+                    <div class="right">
+                        <div class="top-header">
+                            <span class="username"><a href="#">Rudeboy</a></span>
+                            <span class="handle">@rudeboypsquare</span>
+                            <div class="dot"></div>
+                            <span class="time_ago">3m</span>
+                        </div>
+
+                        <div class="tweet-text">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                        </div>
+
+                        <div class="tweet-images">
+                            <div class="single-image"></div>
+                        </div>
+
+                        <div class="tweet-icons">
+                            <span class="icons">
+                                <i class="fa fa-comment"></i>1
+                            </span>
+                            <span class="icons">
+                                <i class="fa fa-retweet"></i>2
+                            </span>
+                            <span class="icons">
+                                <i class="fa fa-heart"></i>3
+                            </span>
+                            <span class="icons">
+                                <i class="fa fa-arrow-up"></i>4
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <!-- <div class="test-link-div"></div> -->
+                <!-- <div class="test-link-div"></div> -->
+            <div class="tweet-container">
+                <a href="#top-bar2" class="tweet-link"></a>
+                <div class="sides">
+                    <div class="side-left-side">
+                        <a href="#profile">
+                            <div class="profile-img"></div>
+                        </a>
+                    </div>
+                    <div class="right">
+                        <div class="top-header">
+                            <span class="username"><a href="#">Rudeboy</a></span>
+                            <span class="handle">@rudeboypsquare</span>
+                            <div class="dot"></div>
+                            <span class="time_ago">3m</span>
+                        </div>
+
+                        <div class="tweet-text">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                        </div>
+
+                        <div class="tweet-images multiple">
+                            <div class="image image-one"></div>
+                            <div class="image image-two"></div>
+                        </div>
+
+                        <div class="tweet-icons">
+                            <span class="icons">
+                                <i class="fa fa-comment"></i>1
+                            </span>
+                            <span class="icons">
+                                <i class="fa fa-retweet"></i>2
+                            </span>
+                            <span class="icons">
+                                <i class="fa fa-heart"></i>3
+                            </span>
+                            <span class="icons">
+                                <i class="fa fa-arrow-up"></i>4
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%= render 'landing/right_column' %>
+</section>

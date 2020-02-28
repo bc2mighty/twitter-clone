@@ -1,0 +1,511 @@
+// Place all the styles related to the Landing controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+$primary_color: rgb(29, 161, 242);
+
+
+section.page-container{
+    height: auto;
+    width: 100%;
+    padding: 0 7%;
+    box-sizing: border-box;
+    display: flex;
+    position: relative;
+
+    .column:first-child{
+        height: 100vh;
+        width: 100px;
+        border-right-color: #dedede;
+        border-right-width: thin;
+        border-right-style: solid;
+        position: fixed;
+
+        ul{
+            height: auto;
+            margin-top: 5px;
+            width: 100%;
+            list-style-type: none;
+            padding: 0;
+
+            li{
+                width: 100%;
+                height: auto;
+                text-align: center;
+
+                a{
+                    display: block;
+                    height: 50px;
+                    width: 50px;
+                    margin: 5px auto;
+                    position: relative;
+                    border-radius: 50%;
+
+                    .red{
+                        background: red;
+                        height: 4px;
+                        width: 4px;
+                        position: absolute;
+                        margin-top: 6px;
+                        margin-left: 31px;
+                        z-index: 10;
+                        border-radius: 50%;
+                        display: none;
+                    }
+
+                    i.fa{
+                        font-size: 30px;
+                        color: $primary_color;
+                        // border-radius: 50%;
+                        padding: 10px;
+                        box-sizing: border-box;
+                        position: relative;
+                    }
+
+                    i.fa.no-color{
+                        color: #000;
+                    }
+
+                    i.fa.fa-envelope, i.fa.fa-bell, i.fa-sign-out{
+                        font-size: 25px;
+                    }
+                }
+
+                a.user-link{
+                    height: 38px;
+                    width: 38px;
+                    background: #deebfa;
+                    border-radius: 50%;
+                    padding-top: 4px;
+                    box-sizing: border-box;
+                }
+
+                a:hover{
+                    background: #deebfa;
+                    transition: .1s ease-in-out;
+
+                    .red{
+                        display: block;
+                    }
+                }
+
+                a.no-icon{
+                    border-radius: 50%;
+                    text-transform: none;
+                    text-decoration: none;
+                    font-size: 32px;
+                    color: #000;
+                    text-align: center;
+                }
+
+                a.no-icon:hover{
+                    color: $primary_color;
+                    background: #deebfa;
+                    transition: .1s ease-in;
+                }
+            }
+        }
+    }
+
+    .column:nth-child(2){
+        height: auto;
+        width: 55%;
+        margin-left: 100px;
+        border-right-color: #dedede;
+        border-right-width: thin;
+        border-right-style: solid;
+
+        .home-top{
+            height: 65px;
+            border-bottom-color: #dedede;
+            border-bottom-width: thin;
+            border-bottom-style: solid;
+            display: flex;
+            padding: 10px 3%;
+            box-sizing: border-box;
+
+            .title{
+                font-size: 22px;
+                font-weight: bolder;
+            }
+
+            i.fa{
+                display: block;
+                margin-left: 80%;
+                color: $primary_color;
+                font-size: 22px;
+                margin-top: 8px;
+            }
+        }
+
+        .tweet-form-after{
+            height: 10px;
+            width: 100%;
+            background: #e6eef7;
+            display: block;
+            content: "";
+        }
+
+        .tweet-form{
+            height: 160px;
+            width: 100%;
+            padding: 15px 3%;
+            box-sizing: border-box;
+            display: flex;
+            border-bottom: thin solid #deebfa;
+
+            .side-left-side{
+                height: 60px;
+                width: 60px;
+                background: #deebfa;
+                border-radius: 50%;
+                text-align: center;
+                padding-top: 10px;
+                box-sizing: border-box;
+                margin-right: 10px;
+
+                img.img-class{
+                    border-radius: 50%;
+                }
+            }
+
+            .right{
+                height: inherit;
+                width: calc(100% - 70px);
+                // border: thin solid #dedede;
+
+                form{
+                    height: inherit;
+                    width: 100%;
+
+                    .input-container{
+                        height: 90px;
+                        width: 100%;
+
+                        input{
+                            height: auto;
+                            width: 100%;
+                            padding: 10px 2%;
+                            box-sizing: border-box;
+                            word-break: break-all;
+                            font-size: 20px;
+                            border: none;
+                            box-shadow: none;
+                        }
+
+                        input:focus{
+                            border: thin solid #000;
+                        }
+                    }
+
+                    .icons{
+                        height: 40px;
+                        width: 100%;
+                        display: flex;
+
+                        span.span-fields{
+                            display: block;
+                            height: inherit;
+                            width: 40px;
+                            background-size: contain;
+
+                            input[type=file]{
+                                opacity: 0;
+                                height: inherit;
+                                width: 100%;
+                            }
+
+                            input[type=submit]{
+                                background: $primary_color;
+                                color: #fff;
+                                box-shadow: none;
+                                border: none;
+                                padding: 8px 15px;
+                                border-radius: 20px;
+                                font-weight: bold;
+                            }
+                        }
+
+                        span.file-field{
+                            background-image: url(image_path("image"));
+                        }
+
+                        span.btn-field{
+                            margin-left: calc(100% - 120px);
+                        }
+                    }
+                }
+            }
+        }
+
+        .all-tweets{
+            height: auto;
+            width: 100%;
+
+            .tweet-container{
+                height: auto;
+                width: 100%;
+                padding: 15px 3%;
+                box-sizing: border-box;
+                display: flex;
+                border-bottom: thin solid #dedede;
+                margin-bottom: 20px;
+                position: relative;
+
+                a.tweet-link:hover{
+                    .tweet-container{
+                        background: #fafdff;
+                    }
+                }
+    
+                a.tweet-link{
+                    display: block;
+                    width: 100%;
+                    height: inherit;
+                    text-decoration: none;
+                    text-transform: none;
+                    position: absolute;
+                    left:0; top:0; bottom:0; right:0;
+                }
+
+                .sides{
+                    height: auto;
+                    width: 100%;
+                    display: flex;
+                    position:relative;
+                    pointer-events: none;
+                    z-index: 1;
+
+                    a{
+                        pointer-events: all;
+                    }
+    
+                    .side-left-side{
+                        height: 50px;
+                        width: 50px;
+                        background-color: #deebfa;
+                        text-align: center;
+                        padding-top: 10px;
+                        box-sizing: border-box;
+                        border-radius: 50%;
+                        margin-right: 10px;
+                        
+                        // a{
+                        //     height: inherit;
+                        //     width: 100%;
+                        //     display: block;
+    
+                            .profile-img{
+                                height: 25px;
+                                width: 25px;
+                                background-image: url(image_path("user"));
+                                background-size: contain;
+                                background-repeat: no-repeat;
+                                margin: 0 auto;
+                            }
+                        // }
+        
+                    }
+        
+                    .right{
+                        width: calc(100% - 60px);
+                        height: auto;
+        
+                        .top-header{
+                            height: 30px;
+                            width: 100%;
+                            display: flex;
+                            color: #000;
+        
+                            span, div{
+                                margin-right: 9px;
+                            }
+        
+                            span.username{
+                                font-weight: bolder;
+
+                                a{
+                                    display: block;
+                                    color: black;
+                                }
+                            }
+        
+                            span.handle{
+                                color: #878787;
+                            }
+        
+                            div.dot{
+                                background-color: #878787;
+                                height: 3px;
+                                width: 3px;
+                                border-radius: 50%;
+                                margin-top: 12px;
+                            }
+        
+                            span.time_ago{
+                                color: #878787;
+                            }
+                        }
+        
+                        .tweet-text{
+                            height: auto;
+                            width: 100%;
+                            padding: 5px 0;
+                            box-sizing: border-box;
+                            text-align: justify;
+                            color: #000;
+                        }
+        
+                        .tweet-images{
+                            height: 250px;
+                            width: 100%;
+                            margin-top: 10px;
+        
+                            .single-image{
+                                height: inherit;
+                                width: 100%;
+                                background-image: url(image_path("pic_1.jfif"));
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                border-radius: 10px;
+                            }
+                        }
+        
+                        .tweet-images.multiple{
+                            display: flex;
+                            .image{
+                                height: inherit;
+                                width: 49.8%;
+                                background-position: center;
+                                background-repeat: no-repeat;
+                            }
+        
+                            .image-one{
+                                background-image: url(image_path("pic_1.jfif"));
+                                border-top-left-radius: 10px;
+                                border-bottom-left-radius: 10px;
+                                margin-right: 0.4%;
+        
+                            }
+        
+                            .image-two{
+                                background-image: url(image_path("pic_2.jfif"));
+                                border-top-right-radius: 10px;
+                                border-bottom-right-radius: 10px;
+                            }
+                        }
+        
+                        .tweet-icons{
+                            height: 20px;
+                            width: 100%;
+                            display: flex;
+                            margin-top: 13px;
+                            
+                            span{
+                                margin-right: 23%;
+                                display: flex;
+                                color: #000;
+        
+                                i.fa{
+                                    font-size: 15px;
+                                    margin-right: 23%;
+                                    color: #000;
+                                    font-weight: normal;
+                                    margin-top: 5px;
+                                }
+                            }
+        
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .column:last-child{
+        height: 100vh;
+        width: calc(100% - 55% - 100px);
+        padding: 10px 3%;
+        box-sizing: border-box;
+
+        form.search-form{
+            height: 40px;
+            width: 100%;
+            margin-bottom: 15px;
+            
+            input{
+                height: inherit;
+                width: 100%;
+                border: none;
+                box-shadow: none;
+                border-radius: 20px;
+                background: rgb(230, 236, 240);
+                padding: 3px 7%;
+                box-sizing: border-box;
+            }
+        }
+
+        .trends{
+            height: auto;
+            width: 100%;
+            background: rgb(230, 236, 240);
+            border-radius: 10px;
+
+            ul{
+                height: inherit;
+                width: 100%;
+                list-style-type: none;
+                padding: 0;
+
+                li{
+                    height: auto;
+                    width: 100%;
+                    display: flex;
+                    border-bottom: thin solid #dedede;
+                    padding: 9px 4%;
+                    box-sizing: border-box;
+
+                    p.trend-title{
+                        font-size: 13px;
+                        color: #878787;
+                        margin-bottom: 2px;
+                    }
+
+                    p.trend-hashtag{
+                        font-size: 14px;
+                        color: #000;
+                        font-weight: bolder;
+                        margin-bottom: 2px;
+                    }
+
+                    p.trend-tweet-number{
+                        font-size: 14px;
+                        color: #878787;
+                        margin-bottom: 2px;
+                    }
+
+                    i.fa{
+                        font-size: 15px;
+                        margin-left: 52%;
+                        color: #878787;
+                        margin-top: 3px;
+                        font-weight: lighter;
+                    }
+                }
+
+                li:first-child{        
+                    padding-bottom: 2px;            
+                    h5{
+                        font-weight: bolder;
+                    }
+
+                    i.fa{
+                        font-size: 22px;
+                        margin-left: 43%;
+                        color: $primary_color;
+                        margin-top: 3px;
+                    }
+                }
+            }
+        }
+    }
+}

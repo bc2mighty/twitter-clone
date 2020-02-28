@@ -1,0 +1,100 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ .bg, .r-13gxpu9 {
+    background-color: rgb(113, 201, 248);
+}
+  
+ .subHead{
+     display: flex;
+     flex-direction: row;
+ }
+ .las{
+     color: #fff;
+    font-size: 30px;
+    padding-right: 5px;
+ }
+.logo-section{
+    display: flex;
+    flex-direction: column;
+}
+.twit{
+    margin-left: 40%;
+}
+
+ 
+  .subtitle {
+    color: #fff;
+    font-size: 19px;
+    
+ 
+  }
+  .content{
+     position: absolute;
+     top: 40%;
+     left: 30%;
+
+  }
+
+  @media only screen and (max-width: 600px) {
+    .content {
+     top: 37%;
+      left: 25%;
+      font-size: 15px;
+    }
+    .las{       
+       font-size: 30px;
+       margin-right: 5px;
+    }
+    .subtitle {
+        color: #fff;
+        font-size: 11px;
+        
+     
+      }
+  }
+  .signup, .login {
+    border-radius: 20px;
+    width: 70%;
+    color:white
+  }
+
+  .signup, .submit {
+    background-color: rgba(29,161,242,1.00) !important;
+   
+    }
+    .la-twitter{
+        color: rgba(29,161,242,1.00) !important;
+        font-size: 64px;
+        margin-right: 7em;
+    }
+    .left{
+        margin-left: 3em;
+    }
+  .login {
+    border-color: rgba(29,161,242,1.00) !important;
+    
+    }
+  .login:hover {
+    background: rgba(29,161,242,1.00) !important;
+   
+    }
+
+    .jumbotron{
+        margin: 0 auto;
+        background: #fff !important;
+    }
+
+
